@@ -567,3 +567,42 @@ a {
     margin: 0 2rem;
   }
 }
+
+/*collapsible*/
+.collapsible {
+  cursor: pointer;
+}
+
+.collapsible_header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.collapsible_heading {
+  margin-top: 0;
+  font-size: 3rem;
+}
+
+.collapsible__chevron {
+  transform: rotate(-90deg);
+  transition: transform 0.3s;
+}
+
+.collapsible__content {
+  cursor: auto;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.collapsible--expanded .collapsible__chevron {
+  transform: rotate(0deg);
+}
+
+.collapsible--expanded .collapsible__content {
+  display: block;
+  max-height: 100vh;
+  overflow: hidden;
+  opacity: 1;
+}
