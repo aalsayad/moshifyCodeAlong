@@ -208,6 +208,13 @@ a {
   transition: background 0.2s ease-in;
 }
 
+.btn .icon {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1rem;
+  vertical-align: middle;
+}
+
 .btn--primary {
   background: var(--color-primary);
   color: white;
@@ -726,5 +733,31 @@ a {
   .hero__content {
     text-align: left;
     align-self: center;
+  }
+}
+
+/*Domain Block*/
+.block-domain .input-group {
+  margin: 4rem auto;
+  box-shadow: 0 0 30px 20px #e6ebee;
+  border: 0;
+  max-width: 670px;
+}
+
+.block-domain__domain-prices {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 6rem);
+  font-size: 2rem;
+  font-weight: 600;
+  justify-items: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .block-domain__domain-prices {
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    grid-template-rows: 1fr;
   }
 }
